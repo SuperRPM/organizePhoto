@@ -3,6 +3,7 @@ const testFolder = './test/';
 const videoDir = './test/video/';
 const capturedDir = testFolder + 'captured/';
 const duplicatedDir = testFolder + 'duplicated/';
+
 fs.readdir(testFolder, (err, files) => {
     files.forEach((file) => {
         const fileLen = file.length;
@@ -47,13 +48,4 @@ fs.readdir(testFolder, (err, files) => {
             };
         };
     });
-});
-    // fs.renameSync(videoDir, './test/' + 'something', (err) => {if (err) throw(err)});
-    // fs.renameSync('./test/' + 'something', videoDir, (err) => {if (err) throw(err)});
-
-// move path
-// fs.rename(oldpath, newpath, callback)
-
-process.argv.forEach((name) => {
-    console.log(name);
 });
